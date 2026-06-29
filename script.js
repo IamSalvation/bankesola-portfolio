@@ -1,4 +1,14 @@
 // ============================================
+// PROGRESS BAR ON SCROLL
+// ============================================
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById('progressBar').style.width = progress + '%';
+});
+
+// ============================================
 // NAVBAR SCROLL EFFECT
 // ============================================
 const navbar = document.getElementById('navbar');
@@ -43,7 +53,24 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // ============================================
-// GLOW TRAIL ON MOUSE
+// TYPEWRITER EFFECT
+// ============================================
+const subtitle = document.getElementById('typewriterText');
+const originalText = 'Remote Practice Solutions · Patient Coordination · Administrative Support';
+subtitle.textContent = '';
+let charIndex = 0;
+
+function typeWriter() {
+    if (charIndex < originalText.length) {
+        subtitle.textContent += originalText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeWriter, 30);
+    }
+}
+setTimeout(typeWriter, 1200);
+
+// ============================================
+// GLOW TRAIL
 // ============================================
 const glowTrail = document.getElementById('glowTrail');
 let glowTimeout;
@@ -87,14 +114,15 @@ if (customCursor) {
         customCursor.classList.remove('active');
     });
 
-    document.querySelectorAll('a, .btn, .work-compact-card, .service-hex, .testimonial-flip-card, .tilt-card').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            customCursor.classList.add('hover');
+    document.querySelectorAll('a, .btn, .work-compact-card, .service-hex, .testimonial-flip-card, .tilt-card')
+        .forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                customCursor.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                customCursor.classList.remove('hover');
+            });
         });
-        el.addEventListener('mouseleave', () => {
-            customCursor.classList.remove('hover');
-        });
-    });
 }
 
 // ============================================
@@ -159,43 +187,6 @@ document.querySelectorAll('.tilt-card').forEach(card => {
 });
 
 // ============================================
-// HERO IMAGE MOUSE TILT (Like Yinka's)
-// ============================================
-const tiltContainer = document.getElementById('tiltContainer');
-const tiltElement = document.getElementById('tiltElement');
-
-if (tiltContainer && tiltElement) {
-    let tiltTimeoutId = null;
-
-    tiltContainer.addEventListener('mousemove', (e) => {
-        if (window.innerWidth <= 768) return;
-
-        const rect = tiltContainer.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const rotateX = ((y - centerY) / centerY) * -12;
-        const rotateY = ((x - centerX) / centerX) * 12;
-
-        tiltElement.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-        tiltElement.style.transition = 'transform 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-
-        clearTimeout(tiltTimeoutId);
-    });
-
-    tiltContainer.addEventListener('mouseleave', () => {
-        if (window.innerWidth <= 768) return;
-
-        tiltElement.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-        tiltElement.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-
-        tiltTimeoutId = setTimeout(() => {}, 700);
-    });
-}
-
-// ============================================
 // BUTTON RIPPLE EFFECT
 // ============================================
 document.querySelectorAll('.btn-ripple').forEach(btn => {
@@ -250,6 +241,26 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
+// SMOOTH SECTION TRANSITIONS
+// ============================================
+const hiddenSections = document.querySelectorAll('.section-hidden');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+hiddenSections.forEach(section => {
+    sectionObserver.observe(section);
+});
+
+// ============================================
 // STAGGERED CARD ENTRANCE
 // ============================================
 const revealCards = document.querySelectorAll('.reveal-card');
@@ -270,7 +281,7 @@ revealCards.forEach(card => {
 });
 
 // ============================================
-// STATS COUNTER ANIMATION
+// STATS COUNTER
 // ============================================
 const counters = document.querySelectorAll('.counter');
 
@@ -545,7 +556,7 @@ if (form) {
 }
 
 // ============================================
-// BACK TO TOP BUTTON
+// BACK TO TOP
 // ============================================
 const backToTopBtn = document.getElementById('backToTop');
 
