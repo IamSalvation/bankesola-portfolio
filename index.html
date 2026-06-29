@@ -8,46 +8,22 @@
     <meta name="description"
         content="Healthcare Administrative Assistant &amp; Medical Virtual Assistant. Streamlining healthcare workflows, patient coordination &amp; remote practice solutions." />
 
-    <!-- ============================================
-    FAVICON
-    ============================================ -->
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
-    <link rel="manifest" href="./assets/site.webmanifest" />
-
-    <!-- ============================================
-    SOCIAL PREVIEW (Open Graph / Twitter Cards)
-    ============================================ -->
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Social Media Preview -->
     <meta property="og:title" content="Bankesola Banjo · Medical Virtual Assistant" />
     <meta property="og:description"
         content="Healthcare Administrative Assistant &amp; Medical Virtual Assistant. Streamlining healthcare workflows, patient coordination &amp; remote practice solutions." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://iamsalvation.github.io/bankesola-portfolio/" />
-    <meta property="og:image" content="https://iamsalvation.github.io/bankesola-portfolio/assets/og-image.png" />
+    <meta property="og:url" content="https://bankesola.github.io/portfolio/" />
+    <meta property="og:image" content="https://bankesola.github.io/portfolio/assets/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Bankesola Banjo - Medical Virtual Assistant" />
-    <meta property="og:site_name" content="Bankesola Banjo Portfolio" />
-    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Bankesola Banjo · Medical Virtual Assistant" />
     <meta name="twitter:description"
         content="Healthcare Administrative Assistant &amp; Medical Virtual Assistant. Streamlining healthcare workflows, patient coordination &amp; remote practice solutions." />
-    <meta name="twitter:image" content="https://iamsalvation.github.io/bankesola-portfolio/assets/og-image.png" />
-    <meta name="twitter:image:alt" content="Bankesola Banjo - Medical Virtual Assistant" />
-    <meta name="twitter:site" content="@bamikesola" />
-    <meta name="twitter:creator" content="@bamikesola" />
-
-    <!-- ============================================
-    PRELOAD HERO IMAGE
-    ============================================ -->
-    <link rel="preload" as="image" href="./assets/Bankesola.jpeg" type="image/jpeg" />
-    <link rel="preload" as="image" href="./assets/og-image.png" type="image/png" />
+    <meta name="twitter:image" content="https://bankesola.github.io/portfolio/assets/og-image.jpg" />
 
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -66,22 +42,27 @@
 <body>
 
     <!-- =============================================
+  PROGRESS BAR
+  ============================================= -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- =============================================
   NOISE TEXTURE OVERLAY
   ============================================= -->
     <div class="noise-overlay"></div>
 
     <!-- =============================================
-  GLOW TRAIL (Mouse Effect)
+  GLOW TRAIL
   ============================================= -->
     <div class="glow-trail" id="glowTrail"></div>
 
     <!-- =============================================
-  CUSTOM CURSOR (Gold Circle)
+  CUSTOM CURSOR
   ============================================= -->
     <div class="custom-cursor" id="customCursor"></div>
 
     <!-- =============================================
-  NAVIGATION (8 Links - Fixed with smaller font & wider)
+  NAVIGATION
   ============================================= -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
@@ -103,17 +84,16 @@
     </nav>
 
     <!-- =============================================
-  HERO (Image Left, Content Right with Tilt)
+  HERO
   ============================================= -->
-    <section class="hero" id="hero">
-        <!-- Particles Container -->
+    <section class="hero section-hidden" id="hero">
         <div class="particles-container" id="particlesContainer"></div>
 
         <div class="container hero-container">
             <div class="hero-image-left">
-                <div class="hero-image-frame tilt-container" id="tiltContainer">
-                    <div class="hero-image-inner tilt-element" id="tiltElement">
-                        <img src="./assets/Bankesola.jpeg" alt="Bankesola Banjo" />
+                <div class="hero-image-frame">
+                    <div class="hero-image-inner">
+                        <img src="./assets/bankesola.jpg" alt="Bankesola Banjo" />
                         <div class="hero-image-glow"></div>
                     </div>
                     <div class="hero-frame-accent"></div>
@@ -124,30 +104,23 @@
                     <div class="hero-image-badge">✦ HIPAA Certified</div>
                 </div>
                 <div class="hero-stats-bar float-animation">
-                    <div class="stat-item">
-                        <strong class="counter" data-target="2">0</strong><span>Years Experience</span>
-                    </div>
+                    <div class="stat-item"><strong class="counter" data-target="2">0</strong><span>Years Experience</span></div>
                     <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <strong class="counter" data-target="500">0</strong><span>Connections</span>
-                    </div>
+                    <div class="stat-item"><strong class="counter" data-target="500">0</strong><span>Connections</span></div>
                     <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <strong class="counter" data-target="20">0</strong><span>Weekly Patients</span>
-                    </div>
+                    <div class="stat-item"><strong class="counter" data-target="20">0</strong><span>Weekly Patients</span></div>
                 </div>
             </div>
             <div class="hero-content-right">
                 <div class="hero-badge">✦ Medical Virtual Assistant</div>
-                <h1 class="hero-title">Streamlining <span>Healthcare</span> Workflows</h1>
-                <p class="hero-subtitle reveal-text" style="animation-delay: 0.2s;">Remote Practice Solutions · Patient
-                    Coordination · Administrative Support</p>
-                <div class="hero-trust-badges reveal-text" style="animation-delay: 0.4s;">
+                <h1 class="hero-title gradient-text">Streamlining <span>Healthcare</span> Workflows</h1>
+                <p class="hero-subtitle" id="typewriterText"></p>
+                <div class="hero-trust-badges">
                     <span><i class="fas fa-shield-alt"></i> HIPAA Compliant</span>
                     <span><i class="fas fa-file-medical"></i> EHR/EMR Expert</span>
                     <span><i class="fas fa-calendar-check"></i> Patient Scheduling</span>
                 </div>
-                <div class="hero-actions reveal-text" style="animation-delay: 0.6s;">
+                <div class="hero-actions">
                     <a href="#booking" class="btn btn-primary btn-ripple">Schedule Consultation</a>
                     <a href="#services" class="btn btn-outline">View Services</a>
                 </div>
@@ -156,115 +129,111 @@
     </section>
 
     <!-- =============================================
-  ABOUT
+  ABOUT (UPDATED)
   ============================================= -->
-    <section class="about" id="about">
+    <section class="about section-hidden" id="about">
         <div class="container">
             <div class="about-wrapper">
                 <div class="about-text">
                     <span class="section-tag">About Me</span>
-                    <h2 class="section-title">Structured. Reliable. <span>Results-Driven.</span></h2>
-                    <p class="reveal-text" style="animation-delay: 0.1s;">I am a highly organized Virtual Assistant with
-                        hands-on experience in administrative support and
-                        customer service within a fast-paced healthcare environment.</p>
-                    <p class="reveal-text" style="animation-delay: 0.3s;">I specialize in managing emails, coordinating
-                        schedules, maintaining accurate records, and
-                        supporting daily operations with efficiency and professionalism. My strong communication skills,
-                        backed by a Jobberman Soft Skills Certification, ensure clear, respectful, and effective client
-                        interactions.</p>
-                    <p class="tagline reveal-text" style="animation-delay: 0.5s;">
-                        <span class="quote-mark">"</span>Reliability isn't a promise — it's my standard.<span
-                            class="quote-mark">"</span>
+                    <h2 class="section-title">Healthcare-Focused. Reliable. <span>Detail-Oriented.</span></h2>
+
+                    <p>I am a <strong>Medical Virtual Assistant</strong> with hands-on experience in healthcare administration; supporting providers through patient communication, appointment coordination, accurate documentation, and organized workflow management.</p>
+
+                    <p>My goal is simple: to help healthcare providers spend less time on administrative tasks and more time delivering exceptional patient care.</p>
+
+                    <p>With training in <strong>HIPAA Compliance</strong>, <strong>Medical Terminology</strong>, and <strong>Virtual Assistance</strong>, and real experience working inside a clinical environment, I bring professionalism, accuracy, and compassion to every task, while maintaining the highest standards of patient confidentiality.</p>
+
+                    <p class="tagline">
+                        <span class="quote-mark">"</span>Behind every well-run healthcare practice is an organized professional keeping everything moving.<span class="quote-mark">"</span>
                         <span class="quote-author">— Bankesola Banjo</span>
                     </p>
+
                     <a href="#booking" class="btn btn-primary btn-ripple">Let's Connect</a>
                 </div>
                 <div class="about-certificates">
-                    <div class="cert-card glass-card card-glow reveal-card">
+                    <div class="cert-card glass-card card-glow shimmer">
                         <i class="fas fa-certificate"></i>
                         <h4>Jobberman Soft-Skills Training</h4>
                         <p>Communication, Teamwork, Time Management</p>
                     </div>
-                    <div class="cert-card glass-card card-glow reveal-card">
-                        <i class="fas fa-user-md"></i>
-                        <h4>Medical Administrative Assistant</h4>
-                        <p>TS Academy · Healthcare Administration</p>
+                    <div class="cert-card glass-card card-glow shimmer">
+                        <i class="fas fa-user-graduate"></i>
+                        <h4>Virtual Assistant</h4>
+                        <p>TS Academy · Virtual Assistance Training</p>
                     </div>
-                    <div class="cert-card glass-card card-glow reveal-card">
+                    <div class="cert-card glass-card card-glow shimmer">
                         <i class="fas fa-shield-alt"></i>
                         <h4>HIPAA Compliance Trained</h4>
                         <p>Patient Privacy &amp; Data Protection</p>
                     </div>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
     <!-- =============================================
-  SERVICES (Hexagon Grid)
+  SERVICES
   ============================================= -->
-    <section class="services" id="services">
+    <section class="services section-hidden" id="services">
         <div class="container">
             <span class="section-tag">What I Do</span>
             <h2 class="section-title">Healthcare <span>Services</span></h2>
             <p class="section-sub">Comprehensive administrative and operational support for healthcare practices.</p>
 
             <div class="services-hex-grid">
-                <div class="service-hex glass-card tilt-card card-glow reveal-card">
+                <div class="service-hex glass-card tilt-card card-glow shimmer">
                     <div class="hex-icon"><i class="fas fa-calendar-check"></i></div>
                     <h3>Patient Scheduling</h3>
                     <p>Manage appointments, rescheduling, and reminders to prevent conflicts.</p>
                 </div>
-                <div class="service-hex glass-card tilt-card card-glow reveal-card">
+                <div class="service-hex glass-card tilt-card card-glow shimmer">
                     <div class="hex-icon"><i class="fas fa-envelope"></i></div>
                     <h3>Inbox Management</h3>
                     <p>Organize, prioritize, and respond to emails to ensure zero missed messages.</p>
                 </div>
-                <div class="service-hex glass-card tilt-card card-glow reveal-card">
+                <div class="service-hex glass-card tilt-card card-glow shimmer">
                     <div class="hex-icon"><i class="fas fa-file-medical-alt"></i></div>
                     <h3>Medical Records</h3>
                     <p>Maintain accurate digital and physical records for easy accessibility.</p>
                 </div>
-                <div class="service-hex glass-card tilt-card card-glow reveal-card">
+                <div class="service-hex glass-card tilt-card card-glow shimmer">
                     <div class="hex-icon"><i class="fas fa-headset"></i></div>
                     <h3>Patient Support</h3>
                     <p>Handle patient inquiries with professionalism, empathy, and timely resolution.</p>
                 </div>
-                <div class="service-hex glass-card tilt-card card-glow reveal-card">
+                <div class="service-hex glass-card tilt-card card-glow shimmer">
                     <div class="hex-icon"><i class="fas fa-project-diagram"></i></div>
                     <h3>Workflow Coordination</h3>
                     <p>Track, prioritize, and manage daily tasks to meet deadlines consistently.</p>
                 </div>
-                <div class="service-hex glass-card tilt-card card-glow reveal-card">
+                <div class="service-hex glass-card tilt-card card-glow shimmer">
                     <div class="hex-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Research &amp; Reporting</h3>
                     <p>Conduct detailed research to support decision-making and task execution.</p>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
     <!-- =============================================
-  EXPERIENCE SECTION
+  EXPERIENCE
   ============================================= -->
-    <section class="experience" id="experience">
+    <section class="experience section-hidden" id="experience">
         <div class="container">
             <span class="section-tag">Experience</span>
             <h2 class="section-title">Where I've <span>Worked</span></h2>
+
             <div class="experience-timeline">
                 <div class="exp-item reveal-card">
                     <div class="exp-marker"></div>
-                    <div class="exp-content glass-card tilt-card card-glow">
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
                         <div class="exp-header">
                             <h3>Administrative Assistant</h3>
                             <span class="exp-company">Reliance Health</span>
                             <span class="exp-date">Apr 2024 – Present · 2 yrs 3 mos</span>
                         </div>
-                        <p class="exp-desc">Managed and coordinated 20+ weekly appointments, scheduling systems, and
-                            patient communication. Streamlined administrative operations for a fast-paced healthcare
-                            environment.</p>
+                        <p class="exp-desc">Managed and coordinated 20+ weekly appointments, scheduling systems, and patient communication.</p>
                         <div class="exp-skills">
                             <span>Customer Service</span>
                             <span>Patient Coordination</span>
@@ -272,16 +241,16 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="exp-item reveal-card">
                     <div class="exp-marker"></div>
-                    <div class="exp-content glass-card tilt-card card-glow">
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
                         <div class="exp-header">
                             <h3>Operations Support Officer</h3>
                             <span class="exp-company">Chaptersandhill</span>
                             <span class="exp-date">Jun 2025 – Present · 1 yr 1 mo</span>
                         </div>
-                        <p class="exp-desc">Managed and responded to 50+ Instagram inquiries and customer messages
-                            weekly. Coordinated projects and supported operational workflows remotely.</p>
+                        <p class="exp-desc">Managed and responded to 50+ Instagram inquiries and customer messages weekly.</p>
                         <div class="exp-skills">
                             <span>Canva Design</span>
                             <span>Project Coordination</span>
@@ -289,48 +258,48 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="exp-item reveal-card">
                     <div class="exp-marker"></div>
-                    <div class="exp-content glass-card tilt-card card-glow">
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
                         <div class="exp-header">
                             <h3>Call Center Agent</h3>
                             <span class="exp-company">Aje Money Loan</span>
                             <span class="exp-date">Jan 2023 – May 2023 · 5 mos</span>
                         </div>
-                        <p class="exp-desc">Handled inbound and outbound customer calls, resolved inquiries, and
-                            maintained professional communication standards.</p>
+                        <p class="exp-desc">Handled inbound and outbound customer calls, resolved inquiries, and maintained professional communication.</p>
                         <div class="exp-skills">
                             <span>Interpersonal Communication</span>
                             <span>Outbound Marketing</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="exp-item reveal-card">
                     <div class="exp-marker"></div>
-                    <div class="exp-content glass-card tilt-card card-glow">
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
                         <div class="exp-header">
                             <h3>Literacy Tutor</h3>
                             <span class="exp-company">Ascenders Christian School</span>
                             <span class="exp-date">Dec 2021 – Dec 2022 · 1 yr 1 mo</span>
                         </div>
-                        <p class="exp-desc">Provided literacy support and e-learning facilitation to students in a
-                            structured academic environment.</p>
+                        <p class="exp-desc">Provided literacy support and e-learning facilitation to students in a structured academic environment.</p>
                         <div class="exp-skills">
                             <span>E-Learning</span>
                             <span>Interpersonal Communication</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="exp-item reveal-card">
                     <div class="exp-marker"></div>
-                    <div class="exp-content glass-card tilt-card card-glow">
+                    <div class="exp-content glass-card tilt-card card-glow shimmer">
                         <div class="exp-header">
                             <h3>Customer Care Officer</h3>
                             <span class="exp-company">Prudence Micro Finance</span>
                             <span class="exp-date">Feb 2021 – Sep 2021 · 8 mos</span>
                         </div>
-                        <p class="exp-desc">Delivered customer service and administrative support in a fast-paced
-                            financial services environment.</p>
+                        <p class="exp-desc">Delivered customer service and administrative support in a fast-paced financial services environment.</p>
                         <div class="exp-skills">
                             <span>Customer Service</span>
                             <span>Organization Skills</span>
@@ -338,46 +307,44 @@
                     </div>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
     <!-- =============================================
-  WORK / CASE STUDIES (Compact Cards)
+  WORK / CASE STUDIES
   ============================================= -->
-    <section class="work" id="work">
+    <section class="work section-hidden" id="work">
         <div class="container">
             <span class="section-tag">Case Studies</span>
             <h2 class="section-title">Tasked. Managed. <span>Delivered.</span></h2>
             <p class="section-sub">Click any card to view the full case study.</p>
 
             <div class="work-compact-grid">
-                <div class="work-compact-card glass-card tilt-card card-glow reveal-card" data-case="trello">
+                <div class="work-compact-card glass-card tilt-card card-glow shimmer" data-case="trello">
                     <div class="work-compact-icon"><i class="fas fa-tasks"></i></div>
                     <h3>Trello Board Setup</h3>
                     <p>Task assignments, deadlines &amp; progress tracking</p>
                     <span class="work-compact-cta">View case study →</span>
                 </div>
-                <div class="work-compact-card glass-card tilt-card card-glow reveal-card" data-case="brand">
+                <div class="work-compact-card glass-card tilt-card card-glow shimmer" data-case="brand">
                     <div class="work-compact-icon"><i class="fas fa-palette"></i></div>
                     <h3>Brand Identity Design</h3>
                     <p>Visual strategy &amp; cohesive brand presence</p>
                     <span class="work-compact-cta">View case study →</span>
                 </div>
-                <div class="work-compact-card glass-card tilt-card card-glow reveal-card" data-case="onboarding">
+                <div class="work-compact-card glass-card tilt-card card-glow shimmer" data-case="onboarding">
                     <div class="work-compact-icon"><i class="fas fa-users"></i></div>
                     <h3>Client Onboarding</h3>
                     <p>Structured onboarding &amp; client communication</p>
                     <span class="work-compact-cta">View case study →</span>
                 </div>
-                <div class="work-compact-card glass-card tilt-card card-glow reveal-card" data-case="google">
+                <div class="work-compact-card glass-card tilt-card card-glow shimmer" data-case="google">
                     <div class="work-compact-icon"><i class="fas fa-google"></i></div>
                     <h3>Google Workspace Ops</h3>
                     <p>Workflow management &amp; team coordination</p>
                     <span class="work-compact-cta">View case study →</span>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
@@ -396,7 +363,7 @@
     <!-- =============================================
   TOOLS (Marquee)
   ============================================= -->
-    <section class="tools" id="tools">
+    <section class="tools section-hidden" id="tools">
         <div class="container">
             <span class="section-tag">My Toolbox</span>
             <h2 class="section-title">Tools I <span>Master</span></h2>
@@ -423,34 +390,30 @@
                     <span class="tool-marquee-item"><i class="fab fa-microsoft"></i> Microsoft 365</span>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
     <!-- =============================================
   TESTIMONIALS (Flip Card Carousel)
   ============================================= -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials section-hidden" id="testimonials">
         <div class="container">
             <span class="section-tag">Testimonials</span>
             <h2 class="section-title">What Clients <span>Say</span></h2>
+
             <div class="testimonial-flip-container">
                 <div class="testimonial-flip-track" id="testimonialTrack">
                     <!-- Flip Card 1 -->
-                    <div class="testimonial-flip-card tilt-card reveal-card">
+                    <div class="testimonial-flip-card tilt-card">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front glass-card card-glow">
+                            <div class="flip-card-front glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Bankesola organized workflows and managed communication systems with exceptional
-                                    efficiency.</p>
+                                <p>Bankesola organized workflows and managed communication systems with exceptional efficiency.</p>
                                 <div class="flip-hint">↻ Click to flip</div>
                             </div>
-                            <div class="flip-card-back glass-card card-glow">
+                            <div class="flip-card-back glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Her approach to inbox and calendar management was thoughtful, proactive, and aligned
-                                    with real business needs. She shows the reliability needed to support busy
-                                    healthcare
-                                    professionals.</p>
+                                <p>Her approach to inbox and calendar management was thoughtful, proactive, and aligned with real business needs.</p>
                                 <div class="t-author-flip">
                                     <div class="t-avatar-flip">C</div>
                                     <div>
@@ -461,20 +424,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Flip Card 2 -->
-                    <div class="testimonial-flip-card tilt-card reveal-card">
+                    <div class="testimonial-flip-card tilt-card">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front glass-card card-glow">
+                            <div class="flip-card-front glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Bankesola was a game-changer for our brand presence. She managed our inbox with
-                                    professionalism and a personal touch.</p>
+                                <p>Bankesola was a game-changer for our brand presence. She managed our inbox with professionalism and a personal touch.</p>
                                 <div class="flip-hint">↻ Click to flip</div>
                             </div>
-                            <div class="flip-card-back glass-card card-glow">
+                            <div class="flip-card-back glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>She took full ownership of our content calendar, planning and scheduling posts with
-                                    consistency and creativity. Her organization and communication skills made her
-                                    invaluable.</p>
+                                <p>She took full ownership of our content calendar, planning and scheduling posts with consistency and creativity.</p>
                                 <div class="t-author-flip">
                                     <div class="t-avatar-flip">C</div>
                                     <div>
@@ -485,19 +446,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Flip Card 3 -->
-                    <div class="testimonial-flip-card tilt-card reveal-card">
+                    <div class="testimonial-flip-card tilt-card">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front glass-card card-glow">
+                            <div class="flip-card-front glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>You made everything feel a lot easier and more organized. Your communication always
-                                    felt natural and timely.</p>
+                                <p>You made everything feel a lot easier and more organized. Your communication always felt natural and timely.</p>
                                 <div class="flip-hint">↻ Click to flip</div>
                             </div>
-                            <div class="flip-card-back glass-card card-glow">
+                            <div class="flip-card-back glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>I really appreciated how you took initiative and kept things running smoothly without
-                                    me having to worry. It genuinely felt like I had solid support the whole time.</p>
+                                <p>I really appreciated how you took initiative and kept things running smoothly without me having to worry.</p>
                                 <div class="t-author-flip">
                                     <div class="t-avatar-flip">S</div>
                                     <div>
@@ -508,20 +468,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Flip Card 4 (Healthcare) -->
-                    <div class="testimonial-flip-card tilt-card reveal-card">
+                    <div class="testimonial-flip-card tilt-card">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front glass-card card-glow">
+                            <div class="flip-card-front glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Bankesola's support in our healthcare practice has been outstanding. She manages
-                                    patient scheduling with precision and care.</p>
+                                <p>Bankesola's support in our healthcare practice has been outstanding. She manages patient scheduling with precision and care.</p>
                                 <div class="flip-hint">↻ Click to flip</div>
                             </div>
-                            <div class="flip-card-back glass-card card-glow">
+                            <div class="flip-card-back glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Her attention to detail and understanding of healthcare workflows made a significant
-                                    difference in our daily operations. She is reliable, professional, and a true asset
-                                    to any medical practice.</p>
+                                <p>Her attention to detail and understanding of healthcare workflows made a significant difference in our daily operations.</p>
                                 <div class="t-author-flip">
                                     <div class="t-avatar-flip">D</div>
                                     <div>
@@ -532,21 +490,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Flip Card 5 (Healthcare) -->
-                    <div class="testimonial-flip-card tilt-card reveal-card">
+                    <div class="testimonial-flip-card tilt-card">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front glass-card card-glow">
+                            <div class="flip-card-front glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Bankesola coordinated a 9-member healthcare project team with precision and
-                                    professionalism.</p>
+                                <p>Bankesola coordinated a 9-member healthcare project team with precision and professionalism.</p>
                                 <div class="flip-hint">↻ Click to flip</div>
                             </div>
-                            <div class="flip-card-back glass-card card-glow">
+                            <div class="flip-card-back glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Her structured approach to task coordination and communication improved our team's
-                                    accountability and efficiency. She is an exceptional operations support
-                                    professional.
-                                </p>
+                                <p>Her structured approach to task coordination and communication improved our team's accountability and efficiency.</p>
                                 <div class="t-author-flip">
                                     <div class="t-avatar-flip">T</div>
                                     <div>
@@ -557,21 +512,18 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Flip Card 6 -->
-                    <div class="testimonial-flip-card tilt-card reveal-card">
+                    <div class="testimonial-flip-card tilt-card">
                         <div class="flip-card-inner">
-                            <div class="flip-card-front glass-card card-glow">
+                            <div class="flip-card-front glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>Your initiative and consistency made working with you effortless. Everything felt
-                                    organized and well-managed.</p>
+                                <p>Your initiative and consistency made working with you effortless. Everything felt organized and well-managed.</p>
                                 <div class="flip-hint">↻ Click to flip</div>
                             </div>
-                            <div class="flip-card-back glass-card card-glow">
+                            <div class="flip-card-back glass-card card-glow shimmer">
                                 <div class="t-quote">"</div>
-                                <p>I never had to worry about follow-ups or missed communications. You handled
-                                    everything
-                                    with care and professionalism. Highly recommend for any healthcare administrative
-                                    role.</p>
+                                <p>I never had to worry about follow-ups or missed communications. You handled everything with care and professionalism.</p>
                                 <div class="t-author-flip">
                                     <div class="t-avatar-flip">M</div>
                                     <div>
@@ -583,85 +535,66 @@
                         </div>
                     </div>
                 </div>
+
                 <button class="flip-carousel-btn flip-prev" id="flipPrev"><i class="fas fa-chevron-left"></i></button>
                 <button class="flip-carousel-btn flip-next" id="flipNext"><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="flip-dots" id="flipDots"></div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
     <!-- =============================================
   BOOKING / PATIENT SCHEDULING
   ============================================= -->
-    <section class="booking" id="booking">
+    <section class="booking section-hidden" id="booking">
         <div class="container">
             <div class="booking-split">
                 <div class="booking-left">
-                    <span class="section-tag"
-                        style="color:var(--gold); border-color:rgba(201,168,76,0.3);">Schedule</span>
-                    <h2 style="color:var(--white); font-size:2.2rem; margin-bottom:8px;">Patient <span
-                            style="color:var(--gold);">Consultation</span></h2>
-                    <p style="color:rgba(255,255,255,0.6); font-size:1rem; max-width:460px;">Ready to streamline your
-                        healthcare practice? Schedule a consultation to discuss how I can support your operations and
-                        patient care.</p>
+                    <span class="section-tag" style="color:var(--gold); border-color:rgba(201,168,76,0.3);">Schedule</span>
+                    <h2 style="color:var(--white); font-size:2.2rem; margin-bottom:8px;">Patient <span style="color:var(--gold);">Consultation</span></h2>
+                    <p style="color:rgba(255,255,255,0.6); font-size:1rem; max-width:460px;">Ready to streamline your healthcare practice? Schedule a consultation to discuss how I can support your operations and patient care.</p>
                     <div class="booking-contact-info">
                         <div><i class="fas fa-envelope"></i> banjobankesola@gmail.com</div>
                         <div><i class="fas fa-phone"></i> 07042662516</div>
                     </div>
-                    <a href="./assets/Bankesola-Banjo-Resume.pdf" download class="btn btn-outline-light"
-                        style="margin-top:12px;">
+                    <a href="./assets/Bankesola-Banjo-Resume.pdf" download class="btn btn-outline-light" style="margin-top:12px;">
                         <i class="fas fa-download"></i> Download Resume
                     </a>
                 </div>
                 <div class="booking-right">
-                    <a href="https://calendly.com/banjobankesola" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-gold btn-block btn-ripple">
+                    <a href="https://calendly.com/banjobankesola" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-block btn-ripple">
                         <i class="fas fa-calendar-plus"></i> Schedule Patient Consultation
                     </a>
                     <a href="mailto:banjobankesola@gmail.com" class="btn btn-email btn-block btn-ripple">
                         <i class="fas fa-envelope"></i> Send Email
                     </a>
-                    <a href="https://wa.me/2347042662516" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-whatsapp btn-block btn-ripple">
+                    <a href="https://wa.me/2347042662516" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block btn-ripple">
                         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                     </a>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
     <!-- =============================================
   CONTACT
   ============================================= -->
-    <section class="contact" id="contact">
+    <section class="contact section-hidden" id="contact">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <span class="section-tag">Connect</span>
                     <h2 class="section-title">Let's <span>Work Together</span></h2>
-                    <p>Reliability isn't a promise — it's my standard. Let's streamline your healthcare practice
-                        together.</p>
+                    <p>Reliability isn't a promise — it's my standard. Let's streamline your healthcare practice together.</p>
                     <div class="contact-social">
-                        <a href="https://www.linkedin.com/in/bankesolabanjo" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/bamikesola_" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/bamikesola" target="_blank" rel="noopener noreferrer"
-                            aria-label="Twitter/X"><i class="fab fa-twitter"></i></a>
-                        <a href="https://youtube.com/@bamikesola" target="_blank" rel="noopener noreferrer"
-                            aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@bamike.medva" target="_blank" rel="noopener noreferrer"
-                            aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://github.com/IamSalvation/bankesola-portfolio" target="_blank"
-                            rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://wa.me/2347042662516" target="_blank" rel="noopener noreferrer"
-                            aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/2347042662516" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/xeebzlra" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your name" required />
                         </div>
@@ -669,8 +602,7 @@
                             <input type="email" name="email" placeholder="Email address" required />
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Tell me about your healthcare practice..."
-                                required></textarea>
+                            <textarea name="message" placeholder="Tell me about your healthcare practice..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit btn-ripple">
                             <i class="fas fa-paper-plane"></i> Send Message
@@ -678,7 +610,6 @@
                     </form>
                 </div>
             </div>
-            <div class="animated-divider"></div>
         </div>
     </section>
 
@@ -693,7 +624,7 @@
     </footer>
 
     <!-- =============================================
-  BACK TO TOP BUTTON
+  BACK TO TOP
   ============================================= -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
