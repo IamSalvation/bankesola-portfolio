@@ -281,7 +281,7 @@ revealCards.forEach(card => {
 });
 
 // ============================================
-// STATS COUNTER
+// STATS COUNTER (with suffix support for 500+)
 // ============================================
 const counters = document.querySelectorAll('.counter');
 
@@ -289,21 +289,21 @@ const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const target = parseInt(entry.target.getAttribute('data-target'));
+            const suffix = entry.target.getAttribute('data-suffix') || '';
             const duration = 2000;
             const startTime = performance.now();
-            const startValue = 0;
 
             function updateCounter(currentTime) {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
                 const eased = 1 - Math.pow(1 - progress, 3);
                 const current = Math.floor(eased * target);
-                entry.target.textContent = current;
+                entry.target.textContent = current + suffix;
 
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 } else {
-                    entry.target.textContent = target;
+                    entry.target.textContent = target + suffix;
                 }
             }
             requestAnimationFrame(updateCounter);
@@ -540,18 +540,13 @@ startFlipAutoSlide();
 const form = document.getElementById('contactForm');
 if (form) {
     form.addEventListener('submit', function(e) {
-        if (this.action.includes('YOUR_FORMSPREE_ID')) {
-            e.preventDefault();
-            const btn = this.querySelector('.btn-submit');
-            const original = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-            btn.style.background = '#C9A84C';
-            setTimeout(() => {
-                btn.innerHTML = original;
-                btn.style.background = '#C9A84C';
-                this.reset();
-            }, 2200);
-        }
+        const btn = this.querySelector('.btn-submit');
+        const original = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+
+        // Form will submit normally to Formspree
+        // The thank you page will be handled by Formspree
     });
 }
 

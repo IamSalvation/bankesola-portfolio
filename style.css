@@ -403,6 +403,9 @@ h3,
     border: 2px solid var(--dark);
 }
 
+/* =============================================
+   HERO - STATS BAR (UPDATED - SINGLE ROW)
+   ============================================= */
 .hero-stats-bar {
     display: flex;
     gap: 20px;
@@ -413,11 +416,13 @@ h3,
     width: 100%;
     max-width: 380px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .hero-stats-bar .stat-item {
     text-align: center;
+    flex: 1;
 }
 
 .hero-stats-bar .stat-item strong {
@@ -425,18 +430,28 @@ h3,
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--gold);
+    font-family: 'Inter', sans-serif;
 }
 
-.hero-stats-bar .stat-item span {
+.hero-stats-bar .stat-item strong .counter {
+    display: inline;
+}
+
+.hero-stats-bar .stat-item span:not(.counter) {
     font-size: 0.55rem;
     color: var(--gray-light);
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    display: block;
+    margin-top: 1px;
 }
 
 .hero-stats-bar .stat-divider {
     width: 1px;
     background: rgba(255, 255, 255, 0.06);
+    flex-shrink: 0;
+    height: 30px;
+    align-self: center;
 }
 
 .hero-content-right {
@@ -1659,6 +1674,7 @@ h3,
 
 .contact-social {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
@@ -1953,7 +1969,7 @@ footer .footer-tagline {
     .hero-stats-bar .stat-item strong {
         font-size: 0.9rem;
     }
-    .hero-stats-bar .stat-item span {
+    .hero-stats-bar .stat-item span:not(.counter) {
         font-size: 0.4rem;
     }
     .hero-stats-bar .stat-divider {
@@ -2031,7 +2047,6 @@ footer .footer-tagline {
         padding: 14px 16px;
     }
 
-    /* === CONTACT FIX — SINGLE COLUMN === */
     .contact-wrapper {
         flex-direction: column;
         gap: 30px;
@@ -2074,7 +2089,6 @@ footer .footer-tagline {
         justify-content: center;
     }
 
-    /* === HIDE EFFECTS === */
     .particles-container {
         display: none;
     }
@@ -2120,7 +2134,7 @@ footer .footer-tagline {
     .hero-stats-bar .stat-item strong {
         font-size: 0.8rem;
     }
-    .hero-stats-bar .stat-item span {
+    .hero-stats-bar .stat-item span:not(.counter) {
         font-size: 0.35rem;
     }
     .hero-stats-bar .stat-divider {
@@ -2172,9 +2186,6 @@ footer .footer-tagline {
         font-size: 1.5rem;
     }
 
-    .contact-detail p {
-        font-size: 0.8rem;
-    }
     .contact-social a {
         width: 34px;
         height: 34px;
